@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Eco Huella</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!-- Si tienes CSS -->
+</head>
+<body>
+    <header>
+        <h1>E C O H U E L L A</h1>
+        <h2>Blog</h2>
+    </header>
+    <section>
+        <p>Bienvenidos al blog de Eco Huella, un espacio donde compartimos ideas, consejos y novedades sobre sostenibilidad, reciclaje y soluciones innovadoras para un mundo más limpio. Aquí encontrarás contenido sobre cómo nuestras acciones pueden marcar la diferencia, historias inspiradoras de impacto positivo y todo lo relacionado con el cuidado del medio ambiente. Juntos, estamos transformando el futuro, un paso a la vez. ¡Únete a la conversación y se parte del cambio!</p>
+    </section>
+    <h2>Mejores Artículos</h2>
+    <div>
+        <img src="{{ url_for('static', filename='img/t.png') }}" alt="Tachos de reciclaje" style="width: 300px; height: auto; margin-right: 20px;">
+        <img src="{{ url_for('static', filename='img/a.png') }}" alt="Aceite usado" style="width: 300px; height: auto;">
+    </div>
+</body>
+</html>

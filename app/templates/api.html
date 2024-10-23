@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Preguntas</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>API de Preguntas</h1>
+    <input type="text" id="question" placeholder="Escribe tu pregunta">
+    <button id="ask-btn">Preguntar</button>
+    <div id="response"></div>
+
+    <script>
+        $('#ask-btn').on('click', function() {
+            const question = $('#question').val();
+            $.ajax({
+                url: '/api/ask',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ question: question }),
+                success: function(response) {
+                    $('#response').html(`<p><strong>Pregunta:</strong> ${response.question}</p><p><strong>Respuesta:</strong> ${response.answer}</p>`);
+                },
+                error: function() {
+                    $('#response').html('<p>Error al procesar la pregunta.</p>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
