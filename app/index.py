@@ -3,21 +3,30 @@ from flask import Flask, render_template, Blueprint, request, jsonify
 # Crear una instancia de Blueprint
 bp = Blueprint('main', __name__)
 
+
 @bp.route('/')
-def index():
-    return render_template('index.html')
+def base():
+    return render_template('base.html')
 
 @bp.route('/blog')
 def blog():
     return render_template('blog.html')
 
-@bp.route('/npdr')
-def npdr():
-    return render_template('npdr.html')
+@bp.route('/np')
+def np():
+    return render_template('np.html')
 
 @bp.route('/api')  # Ruta para la API
 def api_page():
     return render_template('api.html')  # Asegúrate de tener un archivo 'api.html'
+
+@bp.route('/aceite')
+def aceite():
+    return render_template('aceite.html')
+    
+@bp.route('/basura')
+def basura():
+    return render_template('basura.html')
 
 # Ruta para responder preguntas
 @bp.route('/api/ask', methods=['POST'])

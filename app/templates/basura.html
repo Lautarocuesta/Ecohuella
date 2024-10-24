@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contaminación y Residuos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Fondo claro */
+            color: #333; /* Color del texto */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+
+        header {
+            text-align: center; /* Centra el contenido del encabezado */
+            padding: 20px;
+            background: #009688; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+        }
+
+        h1 a {
+            color: white; /* Color del enlace */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        main {
+            max-width: 800px; /* Ancho máximo del contenido */
+            margin: 20px auto; /* Centrado horizontal */
+            padding: 20px;
+            background: white; /* Fondo blanco para el contenido */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            border-radius: 8px; /* Bordes redondeados */
+            text-align: left; /* Alineación del texto a la izquierda */
+        }
+
+        img {
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+            height: auto; /* Mantiene la relación de aspecto de la imagen */
+            margin: 20px 0; /* Espaciado vertical alrededor de la imagen */
+        }
+
+        footer {
+            text-align: center; /* Centra el contenido del pie de página */
+            padding: 20px;
+            background: #009688; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+        }
+
+        footer a {
+            color: white; /* Color de los enlaces en el pie de página */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        .content {
+            margin-top: 20px; /* Espacio superior para el contenido */
+        }
+
+        form {
+            display: flex; /* Flexbox para centrar el formulario */
+            justify-content: center; /* Centra el contenido del formulario */
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc; /* Borde gris claro */
+            border-radius: 4px; /* Bordes redondeados */
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #009688; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 4px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            margin-left: 10px; /* Espacio a la izquierda del botón */
+        }
+
+        button:hover {
+            background: #00796b; /* Color del botón al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('main.blog') }}">E C O H U E L L A</a></h1>
+    </header>
+
+    <main>
+        <img src="{{ url_for('static', filename='img/t.png') }}" alt="Contaminación" />
+        <h2>Contaminación, Mala gestión de los residuos</h2>
+        <p><strong>La importancia de mejorar la recolección de residuos para proteger el planeta</strong></p>
+        <p>Publicado por <strong>ECO HUELLA</strong> el <strong>11 de octubre de 2024</strong></p>
+        
+        <div class="content">
+            <p>
+                El incorrecto manejo de los residuos es uno de los mayores desafíos ambientales que enfrenta nuestro planeta hoy en día. Millones de toneladas de basura son generadas anualmente, y una parte significativa de estos desechos termina contaminando nuestros suelos, cuerpos de agua y el aire que respiramos. Mejorar la recolección de residuos es crucial no solo para reducir este impacto negativo, sino también para preservar la salud del planeta y garantizar un futuro más sostenible.
+            </p>
+            
+            <p>
+                Cuando los residuos no son recolectados de manera eficiente, gran parte de ellos acaba en vertederos, ríos o mares, generando contaminación que afecta tanto a los ecosistemas como a la salud humana. Los plásticos, por ejemplo, pueden tardar siglos en descomponerse, dañando la biodiversidad y envenenando la vida marina. Además, la acumulación de basura genera gases de efecto invernadero, contribuyendo al cambio climático.
+            </p>
+            
+            <p>
+                Una gestión de residuos adecuada, que incluya una recolección eficiente y el reciclaje, permite reducir la cantidad de desechos que llegan a los vertederos y fomenta la reutilización de materiales. Esto no solo reduce la contaminación, sino que también disminuye la demanda de recursos naturales, protegiendo nuestros ecosistemas.
+            </p>
+
+            <p>
+                Es necesario que las ciudades y comunidades implementen sistemas de recolección de residuos más efectivos, donde se priorice la clasificación en origen y se promuevan prácticas sostenibles como el compostaje y el reciclaje. Si todos adoptamos estas medidas, podemos contribuir a la protección del medio ambiente y construir un futuro más limpio y saludable para las generaciones venideras.
+            </p>
+
+            <p>
+                En resumen, mejorar la recolección de residuos es una de las acciones más directas y efectivas para reducir la contaminación y cuidar nuestro planeta. Actuar hoy es esencial para preservar la Tierra mañana.
+            </p>
+        </div>
+
+        <div class="social-share">
+            <p>Comparte esto:</p>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+        </div>
+
+        <section class="comments">
+            <h4>Deja un comentario</h4>
+            <form>
+                <input type="text" placeholder="Escribe un comentario..." required>
+                <button type="submit">Comentar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Eco Huella. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

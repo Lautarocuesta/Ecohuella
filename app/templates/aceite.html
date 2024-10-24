@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El impacto ambiental del aceite usado de cocina y cómo afecta al medio ambiente si no se gestiona correctamente.">
+    <title>El impacto ambiental del aceite usado - Eco Huella</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">E C O H U E L L A</h1>
+            <p class="publication-info">Publicado por ECO HUELLA | 11 de octubre de 2024</p>
+        </div>
+    </header>
+
+    <main class="content container">
+        <img src="{{ url_for('static', filename='img/a.png') }}" alt="Aceite" />
+        <article>
+            <h2 class="title">El impacto ambiental del aceite usado de cocina mal gestionado</h2>
+            <p class="lead">El aceite de cocina usado es un residuo común en millones de hogares y establecimientos de comida, pero pocos conocen el daño que puede causar al medio ambiente si no se desecha o procesa de manera adecuada.</p>
+
+            <section class="section">
+                <h3>Contaminación del agua</h3>
+                <p>Uno de los principales problemas del aceite usado de cocina es su impacto sobre los cuerpos de agua. Un solo litro de aceite puede contaminar hasta 1.000 litros de agua, afectando gravemente los ecosistemas acuáticos.</p>
+            </section>
+
+            <section class="section">
+                <h3>Daño a la flora y fauna</h3>
+                <p>El aceite de cocina usado puede dañar los ecosistemas naturales, afectando principalmente a la vida marina y a las aves acuáticas que dependen de los cuerpos de agua contaminados.</p>
+            </section>
+
+            <section class="section">
+                <h3>Problemas en las infraestructuras urbanas</h3>
+                <p>Verter aceite por los desagües puede obstruir las tuberías, causando atascos y costosos problemas en el alcantarillado urbano.</p>
+            </section>
+
+            <section class="section">
+                <h3>Emisión de gases contaminantes</h3>
+                <p>Si el aceite usado se quema o se desecha de manera inadecuada, genera gases contaminantes que contribuyen al cambio climático.</p>
+            </section>
+
+            <section class="section">
+                <h3>Reciclaje y reutilización</h3>
+                <p>El reciclaje del aceite usado es clave para reducir su impacto ambiental. A través de procesos de reciclaje, se puede convertir en biodiésel y otros productos, promoviendo la economía circular.</p>
+            </section>
+
+            <section class="section conclusion">
+                <h3>Conclusión</h3>
+                <p>El manejo adecuado del aceite de cocina usado es esencial para proteger el medio ambiente y evitar problemas en los ecosistemas y las infraestructuras urbanas.</p>
+            </section>
+        </article>
+
+        <div class="social-share">
+            <p>Comparte este artículo:</p>
+            <a href="#">Twitter</a> | <a href="#">Facebook</a>
+        </div>
+
+        <section class="comments">
+            <h4>Deja un comentario</h4>
+            <form>
+                <textarea placeholder="Escribe un comentario..." required></textarea>
+                <button type="submit">Comentar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Eco Huella. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <style>
+        /* Estilos CSS para mejorar el diseño */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .logo {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .publication-info {
+            text-align: center;
+            font-style: italic;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .lead {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            color: #007bff;
+            font-size: 1.5em;
+        }
+        .social-share {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .social-share a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .comments {
+            margin-top: 40px;
+        }
+        .comments h4 {
+            margin-bottom: 10px;
+        }
+        .comments textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            resize: none;
+        }
+        .comments button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .comments button:hover {
+            background: #0056b3;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+            height: auto; /* Mantiene la relación de aspecto de la imagen */
+            margin: 20px 0; /* Espaciado vertical alrededor de la imagen */
+        }
+
+    </style>
+</body>
+</html>

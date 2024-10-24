@@ -3,25 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Huella</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>ECO HUELLA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS externo -->
 </head>
 <body>
-    <header>
-        <h1>Eco Huella</h1>
-        <nav>
-            <a href="/">Inicio</a>
-            <a href="/blog">Blog</a>
-            <a href="/npdr">Nuestros Producto</a>
-            <a href="/api">Api</a>
-
-        </nav>
+    <header class="text-center">
+        <img src="static/img/logo.png" alt="ECO HUELLA" class="img-fluid my-3">
+        <h1>E C O H U E L L A</h1>
+        <h1>E C O H U E L L A</h1>
     </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-    <footer>
-        <p>&copy; 2024 Eco Huella</p>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/api">API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/np">np</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mt-5">
+        <h2>NUESTRO PROPÓSITO</h2>
+        <p>Participar en la transformación del mundo, aportando un beneficio a la sociedad que mejore nuestra capacidad para convivir de manera armoniosa con el entorno natural.</p>
+        
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos ECO HUELLA, una iniciativa comprometida con transformar el mundo a través de la sostenibilidad. Nos dedicamos a ofrecer soluciones innovadoras para el tratamiento responsable de residuos, con el objetivo de reducir la contaminación y preservar el medio ambiente. Nos guiamos por los principios de la bioeconomía y el desarrollo sostenible, trabajando cada día para fomentar un equilibrio armonioso entre las actividades humanas y la naturaleza. En ECO HUELLA, buscamos siempre transformar el mundo.</p>
+        
+        <h2>MISIÓN</h2>
+        <p>Participar activamente en la transformación del mundo, promoviendo prácticas sostenibles y ofreciendo soluciones innovadoras para el tratamiento responsable de los residuos. Nuestra meta es contribuir a una convivencia armoniosa con el entorno natural, mejorando la calidad de vida de las personas y preservando los ecosistemas.</p>
+        
+        <h2>VISIÓN</h2>
+        <p>Ser un referente global en la gestión sostenible de residuos, impulsando un futuro en el que las comunidades prosperen en un ambiente saludable, libre de contaminación, y donde las generaciones actuales y futuras disfruten de un planeta en condiciones óptimas para vivir.</p>
+        
+        <h2>VALORES</h2>
+        <p>En Ecohuella, nuestros valores nos guían en cada paso hacia un futuro más sostenible. La sostenibilidad es el eje central de nuestro trabajo, promoviendo prácticas que preservan los recursos naturales y protegen el medio ambiente. Creemos en la innovación, por lo que siempre buscamos nuevas y creativas soluciones para enfrentar los desafíos del manejo de residuos y la contaminación.</p>
+        <p>Nos impulsa un fuerte sentido de responsabilidad social, entendiendo que tenemos una responsabilidad compartida de cuidar el planeta y mejorar la calidad de vida de las comunidades afectadas. La conciencia ambiental es clave para nosotros, valorando la educación y la concientización como herramientas para generar un cambio positivo.</p>
+        
+        <h2>Fundadores</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="static/img/cande.png" alt="Candela Peretti" class="img-fluid rounded-circle mb-2">
+                <h3>Candela Peretti</h3>
+                <p>«Soy Candela, CMO y parte del equipo de dirección de ECOHUELLA. Estoy apasionada por el emprendimiento y el cuidado del medio ambiente. Mi objetivo es contribuir de manera positiva al planeta a través de prácticas sostenibles y crear un impacto significativo en nuestras comunidades»</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="static/img/lean.png" alt="Ezequiel Villarreal" class="img-fluid rounded-circle mb-2">
+                <h3>Ezequiel Villarreal</h3>
+                <p>«CEO de ECOHUELLA, apasionado del emprendimiento y de las finanzas con un enfoque especial en proyectos que aporten valor económico y social. Mi objetivo es impulsar soluciones sostenibles que generen un impacto positivo en nuestra sociedad y el medio ambiente»</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="static/img/santi.png" alt="Santiago Torres" class="img-fluid rounded-circle mb-2">
+                <h3>Santiago Torres</h3>
+                <p>«Como visionario de ECOHUELLA, combino mi pasión por el diseño y el desarrollo de hábitos para liderar proyectos innovadores que buscan transformar el mundo. Con una base en contabilidad y una mente enfocada en soluciones sostenibles, trabajo para dejar una huella positiva en el planeta.»</p>
+            </div>
+        </div>
+
+        <div class="text-center my-4">
+            <h4>Espera, no te vayas sin compartir tu opinión:</h4>
+            <a href="#" class="btn btn-primary">Completa esta fabulosa encuesta</a>
+        </div>
+    </section>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 ECO HUELLA. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
