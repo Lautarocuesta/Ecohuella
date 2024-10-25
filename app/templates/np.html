@@ -5,18 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro producto</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!-- Si tienes CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Color de fondo suave */
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center; /* Centrar el contenido del encabezado */
+            margin-bottom: 20px; /* Margen inferior */
+            background-color: #2E8B57; /* Color de fondo del encabezado */
+            color: white;
+            padding: 10px 0; /* Padding superior e inferior */
+            border-radius: 8px;
+        }
+        header img {
+            width: 50px; /* Tamaño del logo */
+            height: auto; /* Mantener proporciones */
+            cursor: pointer; /* Cambiar cursor al pasar sobre el logo */
+            margin-bottom: 10px; /* Espacio entre el logo y el título */
+            background-color: white; /* Fondo blanco para el logo */
+            padding: 5px; /* Padding para el logo */
+            border-radius: 50%; /* Bordes redondeados para el logo */
+        }
+        header h1 {
+            cursor: pointer; /* Cambiar cursor al pasar sobre el título */
+            margin: 0; /* Eliminar margen */
+        }
+        section {
+            margin-bottom: 40px;
+            text-align: justify; /* Justificar texto para un mejor aspecto */
+        }
+        h2 {
+            color: #2E8B57; /* Color del título */
+            margin-top: 40px;
+        }
+        .product-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .product-info {
+            margin-left: 20px;
+        }
+        .product-info h3 {
+            color: #FF6347; /* Color del nombre del producto */
+        }
+        .product-info p {
+            margin: 5px 0;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .review {
+            background-color: #e0f7fa; /* Fondo claro para reseñas */
+            border-left: 2px solid #00796b; /* Borde para reseñas */
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #555; /* Color del texto del pie de página */
+        }
+    </style>
+    <script>
+        function goToBase() {
+            window.location.href = "{{ url_for('main.base') }}"; // Redirige al base.html
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>E C O H U E L L A</h1>
-        <h2>Nuestro Producto</h2>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" onclick="goToBase()">
+        <h1 onclick="goToBase()">E C O H U E L L A</h1>
     </header>
     <section>
+        <h2>Nuestro Producto</h2>
         <p>Nuestros productos en Ecohuella están diseñados con un propósito claro: transformar residuos en soluciones sostenibles que contribuyan al bienestar del planeta y las personas. Cada uno de ellos refleja nuestro compromiso con la economía circular, aprovechando materiales reciclados y minimizando el impacto ambiental. Ofrecemos alternativas ecológicas que no solo reducen la contaminación, sino que también promueven un estilo de vida responsable, sin sacrificar calidad ni funcionalidad. Con Ecohuella, el cambio hacia un futuro más limpio y sostenible comienza en tus manos.</p>
     </section>
-    <h2>Mejores Artículos</h2>
-    <div>
-        <img src="{{ url_for('static', filename='img/aa.png') }}" alt="Tachos de reciclaje" style="width: 300px; height: auto; margin-right: 20px;">
+    
+    <h2>Trampa para Mosquitos</h2>
+    <div class="product-container">
+        <img src="{{ url_for('static', filename='img/aa.png') }}" alt="Trampa para Mosquitos" style="width: 300px; height: auto;">
+        <div class="product-info">
+            <h3>Trampa para Mosquitos</h3>
+            <p>Precio: <strong>$10,000</strong></p>
+            <p>Nuestra trampa para mosquitos es una solución ecológica y efectiva diseñada para controlar la población de mosquitos sin el uso de químicos nocivos. Funciona atrayendo a los insectos mediante una mezcla de luz, calor y dióxido de carbono, simulando la presencia humana. Una vez dentro, los mosquitos son capturados de forma segura. Este dispositivo es ideal para mantener espacios libres de insectos molestos, protegiendo tanto la salud como el medio ambiente, ya que no genera residuos tóxicos ni contamina el aire.</p>
+        </div>
     </div>
+    
+    <h2>Reseñas</h2>
+    <div class="reviews">
+        <div class="review">
+            <p>«Este producto superó mis expectativas. La trampa para mosquitos es fácil de usar y funciona sin necesidad de pesticidas dañinos. Lo mejor es que he notado una gran diferencia en la cantidad de mosquitos en casa. Estoy muy contento de haber encontrado una opción sostenible que realmente hace el trabajo.»</p>
+            <p><strong>- Jayla H.</strong></p>
+        </div>
+        <div class="review">
+            <p>«¡Increíble! La trampa para mosquitos de Ecohuella es super efectiva. Desde que la instalé en mi patio, la cantidad de mosquitos ha disminuido notablemente y ya no tengo que preocuparme por usar repelentes con químicos. Además, es totalmente ecológica, lo que me hace sentir bien por cuidar el medio ambiente mientras protejo a mi familia.»</p>
+            <p><strong>- Esperanza D.</strong></p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Ecohuella. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
